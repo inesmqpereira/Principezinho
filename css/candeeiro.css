@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#fundo_lampiao {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+#acendedor {
+    width: 19%;
+    position: absolute;
+    bottom: -3%;
+    left: 6%;
+    z-index: 0;
+}
+
+
+#pau-container {
+    position: absolute;
+    left: 2%;
+    bottom: 35%;
+    width: 6%;
+    height: 50%;
+    transform-origin: bottom center;
+    z-index: 1;
+}
+
+#pau {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    transform-origin: bottom center;
+    pointer-events: none;
+    transform: rotate(0deg);
+    /* Posição inicial */
+    transition: transform 0.2s ease-out;
+}
+
+.planeta_candeeiro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+#planeta {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    transform-origin: center;
+    /* animation: rotatePlanet 15s linear infinite;*/
+}
+
+.luz {
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    width: 150px;
+    height: auto;
+    transform-origin: center -130px;
+    pointer-events: none;
+
+
+}
+
+#luz1 {
+    transform: rotate(0deg) translateY(100px);
+}
+
+#luz2 {
+    transform: rotate(120deg) translateY(100px);
+}
+
+#luz3 {
+    transform: rotate(240deg) translateY(100px);
+}
+
+
+.balaoA {
+    position: fixed;
+    left: 23%;
+    bottom: 75%;
+    width: 15vw;
+    height: auto;
+    z-index: 5;
+}
+
+/*  */
+.balaoB {
+    position: fixed;
+    left: 30%;
+    bottom: 55%;
+    width: 17vw;
+    height: auto;
+    z-index: 5;
+}
+
+.balaoC {
+    position: fixed;
+    left: 27%;
+    bottom: 30%;
+    width: 17vw;
+    height: auto;
+    z-index: 5;
+}
+
+.balaoA,
+.balaoB,
+.balaoC {
+    display: none;
+    opacity: 0;
+    transition: opacity 3s ease;
+    position: fixed;
+    z-index: 5;
+}
+
+
+/* botão de desistir  */
+.desistir {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+    z-index: 100;
+    display: none;
+    padding: 10px 20px;
+    background-color: #2f0141;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    animation: fadeIn 0.20s ease forwards;
+}
+
+.desistir:hover {
+    background-color: #AEB1E5;
+}
+
+/* Adicione ao seu arquivo candeeiro.css */
+/*.fullScreen-active #seta-retroceder {
+    display: none;
+}*/
+
+/* Posições específicas */
+#posicao1 {
+    position: absolute;
+    bottom: -5%;
+    left: 60%;
+    width: 35%;
+}
+
+#posicao2 {
+    top: 20%;
+    left: 15%;
+    width: 60%;
+}
+
+#homeButton {
+    position: absolute;
+    top: 54%;
+    left: 35%;
+    padding: 10px 30px;
+    background-color: rgb(255, 183, 0);
+    color: black;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#homeButton:hover {
+    background-color: rgb(255, 140, 0);
+}

@@ -1,0 +1,295 @@
+/* Balões de Fala Com Objeto */
+/* Está um grande vendaval! */
+#balao-fala1_dir {
+  position: fixed;
+  left: 37%;
+  bottom: 73%;
+  width: 15vw;
+  height: auto;
+  z-index: 5;
+}
+
+/* Estou a desidratar! */
+#balao-fala2_esq {
+  position: fixed;
+  left: 65%;
+  bottom: 55%;
+  width: 15vw;
+  height: auto;
+  z-index: 5;
+}
+
+/* Tenho frio! */
+#balao-fala3_esq {
+  position: fixed;
+  left: 54%;
+  bottom: 70%;
+  width: 15vw;
+  height: auto;
+  z-index: 5;
+}
+
+/* Está a chover imenso! */
+#balao-fala4_esq {
+  position: fixed;
+  left: 65%;
+  bottom: 55%;
+  width: 15vw;
+  height: auto;
+  z-index: 5;
+}
+
+/* Balões de Fala Sem Objeto - Etapa Cúpula */
+/*O solo está muito seco!*/
+#balao-fala5_esq {
+  position: fixed;
+  left: 57%;
+  bottom: 74%;
+  width: 15vw;
+  height: auto;
+  z-index: 5;
+  display: none; /* Escondido inicialmente */
+}
+
+/*Estou cheia de pó!*/
+#balao-fala6_esq {
+  position: fixed;
+  left: 67%;
+  bottom: 55%;
+  width: 15vw;
+  height: auto;
+  z-index: 5;
+  display: none; /* Escondido inicialmente */
+}
+
+/*As minhas raízes estão a ficar sem espaço!*/
+#balao-fala7_dir {
+  position: fixed;
+  left: 31%;
+  bottom: 55%;
+  width: 15vw;
+  height: auto;
+  z-index: 5;
+  display: none; /* Escondido inicialmente */
+}
+
+/* Balões de Fala Sem Objeto - Etapa Regador */
+#balao-fala8_esq {
+  position: fixed;
+  left: 57%;
+  bottom: 74%;
+  width: 15vw;
+  height: auto;
+  z-index: 5;
+  display: none; /* Escondido inicialmente */
+}
+
+/*Estou cheia de pó!*/
+#balao-fala9_dir {
+  position: fixed;
+  left: 37%;
+  bottom: 77%;
+  width: 15vw;
+  height: auto;
+  z-index: 5;
+  display: none; /* Escondido inicialmente */
+}
+
+/* Balões de Fala Sem Objeto - Etapa Sol */
+#balao-fala10_esq {
+  position: fixed;
+  left: 65%;
+  bottom: 50%;
+  width: 15vw;
+  height: auto;
+  z-index: 5;
+  display: none; /* Escondido inicialmente */
+}
+
+
+/* Objetos */
+.objetos {
+  z-index: 4;
+}
+
+.objetos img {
+  width: 100px;
+  position: fixed;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 4;
+}
+
+/* Posição inicial dos objetos */
+#regador {
+  top: 26vh;
+  left: 2vw;
+}
+
+#guarda-chuva {
+  top: 40vh;
+  left: 8vw;
+}
+
+#cupula {
+  top: 48vh;
+  left: 3vw;
+  width: 70px;
+  opacity: 0.7;
+}
+
+#sol {
+  top: 72vh;
+  left: 5vw;
+}
+
+/* Zona de Sucesso */
+#zona-sucesso {
+  position: absolute;
+  bottom: 0;
+  left: 56%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 70%;
+  border-radius: 10px;
+  z-index: 2;
+  /*border: 2px dashed #00c3ff;
+  background-color: rgba(0, 195, 255, 0.1); */
+}
+
+/* Rosa */
+#rosa {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 70%;
+}
+
+/* Nuvem */
+#nuvem-lateral {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 73%;
+  z-index: 2;
+}
+
+/* Background Noite */
+.noite-rosa {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Planeta */
+.planeta {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 70%;
+}
+
+/* Movimento do Sol */
+@keyframes girarEOscilar {
+  0% { transform: scale(3) rotate(0deg); }
+  25% { transform: scale(3.1) rotate(10deg); }
+  50% { transform: scale(2.9) rotate(20deg); }
+  75% { transform: scale(3.1) rotate(30deg); }
+  100% { transform: scale(3) rotate(360deg); }
+}
+
+.animacao-sol {
+  animation: girarEOscilar 2.5s ease-in-out;
+}
+
+
+/* Estrelas */
+.estrela-animada {
+  position: absolute;
+  animation: piscarEstrela 3s infinite ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes piscarEstrela {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Chuva */
+#chuva {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  display: none;
+  overflow: hidden;
+}
+
+.pingo {
+  position: absolute;
+  top: -20px;
+  width: 2px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  animation: cair 1s linear infinite;
+}
+
+@keyframes cair {
+  0% {
+    top: -20px; 
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+/* Fade-In e Fade-out dos Balões de Fala */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.balao {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.7s ease;
+}
+
+.balao.fade-in {
+  display: block !important;
+  animation: fadeIn 0.7s forwards;
+}
+
+.balao.fade-out {
+  animation: fadeOut 0.7s forwards;
+}
+
+
+/* Evita scroll da tela */
+body {
+  overflow: hidden;
+}

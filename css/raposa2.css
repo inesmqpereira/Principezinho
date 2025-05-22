@@ -1,0 +1,238 @@
+/* raposa2.css */
+/* Estilo para o container da webcam */
+
+#webcam-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: auto;
+  height: 250px;
+  z-index: 100;
+  border: 3px solid #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+
+
+/* Estilo para o canvas da webcam */
+#webcam-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
+}
+
+/* Estilo para o botão de sucesso */
+#botao-final {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+#botao-final:hover {
+  background-color: #45a049;
+  transform: translate(-50%, -50%) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/*   */
+.floresta {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.floresta-img {
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+}
+
+
+/* Camadas da floresta */
+#ceu-raposa {
+  width: 100%;
+  left: 0;
+  z-index: 0;
+}
+
+#floresta6 {
+  /*mais a frente */
+
+  left: 0;
+  z-index: 7;
+}
+
+#floresta5 {
+
+  left: 0;
+  z-index: 6;
+}
+
+#floresta4 {
+
+  left: 0;
+  z-index: 5;
+}
+
+#floresta3 {
+
+  left: 0;
+  z-index: 4;
+}
+
+#floresta2 {
+
+  left: 0;
+  z-index: 3;
+}
+
+#floresta1 {
+
+  left: 0;
+  z-index: 2;
+}
+
+
+#raposa1 {
+  position: absolute;
+  width: 6%;
+  z-index: 2;
+  left: 43%;
+  bottom: 25%;
+}
+
+
+#raposa2 {
+  position: absolute;
+  display: none;
+  width: 8%;
+  z-index: 4;
+  left: 10%;
+  bottom: 25%;
+
+}
+
+
+/* raposa do meio*/
+#raposa3 {
+  position: absolute;
+  display: none;
+  width: 10%;
+  z-index: 5;
+  left: 56%;
+  bottom: 15%;
+
+}
+
+#raposa4 {
+  position: absolute;
+  display: none;
+  width: 15%;
+  z-index: 5;
+  left: 20%;
+  bottom: 10%;
+
+}
+
+#raposa5 {
+  position: absolute;
+  display: none;
+  width: 25%;
+  z-index: 7;
+  left: 40%;
+  bottom: 2%;
+}
+
+#balao-fala12 {
+  position: absolute;
+  width: 30%;
+  z-index: 7;
+  left: 60%;
+  bottom: 40%;
+  display: none;
+}
+
+
+/* falta implementar */
+/* Estilos base para os balões */
+.perguntaA,
+.perguntaB {
+  position: absolute;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+/* Posições específicas para cada raposa */
+/* Raposa 1 */
+body.raposa1 .perguntaA {
+  left: 30%;
+  bottom: 40%;
+  width: 16%;
+}
+
+body.raposa1 .perguntaB {
+  left: 46%;
+  bottom: 40%;
+  width: 14%;
+}
+
+/* Raposa 2 */
+body.raposa2 .perguntaA {
+  left: 2%;
+  bottom: 45%;
+  width: 14%;
+}
+
+body.raposa2 .perguntaB {
+  left: 12%;
+  bottom: 40%;
+  width: 15%;
+}
+
+/* Raposa 3 */
+body.raposa3 .perguntaA {
+  left: 52%;
+  bottom: 37%;
+  width: 15%;
+}
+
+body.raposa3 .perguntaB {
+  left: 60%;
+  bottom: 37%;
+  width: 16%;
+}
+
+/* Raposa 4 */
+body.raposa4 .perguntaA {
+  left: 15%;
+  bottom: 45%;
+  width: 18%;
+}
+
+body.raposa4 .perguntaB {
+  left: 25%;
+  bottom: 45%;
+  width: 18%;
+}
+
