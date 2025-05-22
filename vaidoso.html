@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaidoso</title>
+
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=La+Belle+Aurore&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/vaidoso.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/estrelas.css">
+  <link rel="stylesheet" href="css/geral.css">
+</head>
+
+<body>
+  <header>
+    <!-- Seta Retroceder -->
+    <a href="index.html"><img src="imagens/icones/retroceder.png" alt="seta-retroceder" id="seta-retroceder"></a>
+  </header>
+
+  <main>
+    <!-- Cenário -->
+    <div class="estrelas"> </div>
+    <img src="imagens/vaidoso/cenario/ceu-vaidoso.png" alt="noite-vaidoso" id="noite-vaidoso">
+    <img src="imagens/vaidoso/cenario/planetaFlores.png" alt="planetaFlores" id="planeta-flores">
+    <img src="imagens/vaidoso/movimento/vaidoso1.png" alt="vaidoso" id="vaidoso">
+
+    <!-- Balões de Fala -->
+    <img src="imagens/vaidoso/baloes-fala/balao-fala1.png" alt="balao-fala1" id="balao-fala1" class="balao">
+    <img src="imagens/vaidoso/baloes-fala/balao-fala2.png" alt="balao-fala2" id="balao-fala2" class="balao">
+    <img src="imagens/vaidoso/baloes-fala/balao-fala3.png" alt="balao-fala3" id="balao-fala3" class="balao">
+    <img src="imagens/vaidoso/baloes-fala/balao-fala4.png" alt="balao-fala4" id="balao-fala4" class="balao">
+    <img src="imagens/vaidoso/baloes-fala/balao-fala5.png" alt="balao-fala5" id="balao-fala5" class="balao">
+    <img src="imagens/vaidoso/baloes-fala/balao-fala6.png" alt="balao-fala6" id="balao-fala6" class="balao">
+    <img src="imagens/vaidoso/baloes-fala/balao-fala7.png" alt="balao-fala7" id="balao-fala7" class="balao">
+    <img src="imagens/vaidoso/baloes-fala/balao-fala8.png" alt="balao-fala8" id="balao-fala8" class="balao">
+    <img src="imagens/vaidoso/baloes-fala/balao-fala9.png" alt="balao-fala9" id="balao-fala9" class="balao">
+    <img src="imagens/vaidoso/baloes-fala/balao-fala10.png" alt="balao-fala10" id="balao-fala10" class="balao">
+
+    <!-- Botão de Ajuda -->
+    <div class="ajuda">
+      <img src="imagens/icones/help-icon g.png" onclick="myPopUp()">
+      <span class="popuptext" id="popup" display="none">Aplaude o Vaidoso para o admirares.</span>
+    </div>
+
+    <!-- Botão Finalizar -->
+    <button type="button" class="desistir" id="btnDesistir">Desistir</button>
+
+    <!-- Mensagem Principezinho -->
+    <container class="fullScreen" id="fullscreen-container"> <a class="close" onclick="fecharFullscreen()">X</a>
+    </container>
+  </main>
+
+
+  <!-- JS -->
+  <script src="js/vaidoso.js"></script>
+  <script src="js/estrelas.js"></script>
+  <script src="js/geral.js"></script>
+</body>
+
+</html>

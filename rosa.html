@@ -1,0 +1,101 @@
+<!-- rosa.html -->
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosa</title>
+
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=La+Belle+Aurore&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/rosa.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/geral.css">
+</head>
+
+<body>
+  <header>
+    <!-- Música de fundo -->
+    <audio id="background-music-jogo" loop>
+      <source src="audios/audio-jogo.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Áudio Errado -->
+    <audio id="audio-errado">
+      <source src="audios/fail1.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Áudio Correto -->
+    <audio id="audio-correto">
+      <source src="audios/sucess2.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Seta Retroceder -->
+    <a href="index.html"><img src="imagens/icones/retroceder.png" alt="seta-retroceder" id="seta-retroceder"></a>
+
+  </header>
+
+  <main>
+
+    <!-- Cenário -->
+    <img src="imagens/rosa/cenario/noite-rosa.png" alt="noite-rosa" class="noite-rosa">
+    <img src="imagens/rosa/cenario/planeta.png" alt="planeta" class="planeta">
+    <img src="imagens/rosa/cenario/nuvem-lateral.png" alt="nuvem-lateral" id="nuvem-lateral">
+    <div class="estrelas"></div>
+
+    <!-- Rosa -->
+    <img src="imagens/rosa/movimento/rosa0.png" alt="rosa" id="rosa">
+
+    <!-- Zona de Sucesso -->
+    <div id="zona-sucesso"></div>
+
+    <!-- Objetos -->
+    <div class="objetos">
+      <img src="imagens/rosa/objetos/regador/regador0.png" alt="regador" id="regador">
+      <img src="imagens/rosa/objetos/guarda-chuva.png" alt="guarda-chuva" id="guarda-chuva">
+      <img src="imagens/rosa/objetos/cupula.png" alt="cupula" id="cupula">
+      <img src="imagens/rosa/objetos/sol.png" alt="sol" id="sol">
+    </div>
+
+    <!-- Balão de Fala Com Objeto -->
+    <img src="imagens/rosa/baloes-fala/balao-fala1_dir.png" alt="balao-fala1" id="balao-fala1_dir" class="balao">
+    <img src="imagens/rosa/baloes-fala/balao-fala2_esq.png" alt="balao-fala2" id="balao-fala2_esq" class="balao">
+    <img src="imagens/rosa/baloes-fala/balao-fala3_esq.png" alt="balao-fala3" id="balao-fala3_esq" class="balao">
+    <img src="imagens/rosa/baloes-fala/balao-fala4_esq.png" alt="balao-fala4" id="balao-fala4_esq" class="balao">
+
+    <!-- Balões de Fala Sem Objeto - Etapa Cúpula -->
+    <img src="imagens/rosa/baloes-fala/balao-fala5_esq.png" alt="balao-fala5" id="balao-fala5_esq" class="balao">
+    <img src="imagens/rosa/baloes-fala/balao-fala6_esq.png" alt="balao-fala6" id="balao-fala6_esq" class="balao">
+    <img src="imagens/rosa/baloes-fala/balao-fala7_dir.png" alt="balao-fala7" id="balao-fala7_dir" class="balao">
+
+    <!-- Balões de Fala Sem Objeto - Etapa Regador -->
+    <img src="imagens/rosa/baloes-fala/balao-fala8_esq.png" alt="balao-fala8" id="balao-fala8_esq" class="balao">
+    <img src="imagens/rosa/baloes-fala/balao-fala9_dir.png" alt="balao-fala9" id="balao-fala9_dir" class="balao">
+
+    <!-- Balões de Fala Sem Objeto - Etapa Sol -->
+    <img src="imagens/rosa/baloes-fala/balao-fala10_esq.png" alt="balao-fala10" id="balao-fala10_esq" class="balao">
+
+    <!-- Botão de Ajuda -->
+    <div class="ajuda">
+      <img src="imagens/icones/help-icon g.png" onclick="myPopUp()">
+      <span class="popuptext" id="popup" display="none">Cuida da Rosa movendo o objeto para a protegeres.</span>
+    </div>
+  </main>
+
+  <!-- Mensagem Principezinho -->
+  <container class="fullScreen" id="fullscreen-container"></container>
+
+  <!-- JS -->
+  <script src="js/rosa.js"></script>
+  <script src="js/estrelas.js"></script>
+  <script src="js/geral.js"></script>
+</body>
+
+</html>

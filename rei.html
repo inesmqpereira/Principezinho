@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rei</title>
+
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=La+Belle+Aurore&family=Nunito+Sans:wght@200..1000&family=Poppins:wght@100..900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/rei.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/estrelas.css">
+  <link rel="stylesheet" href="css/geral.css">
+
+  <!-- Script do face-api.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+</head>
+
+<body>
+  <header>
+    <!-- Música de fundo -->
+    <audio id="background-music-jogo" loop>
+      <source src="audios/audio-jogo.mp3" type="audio/mp3">
+    </audio>
+
+       <!-- Áudio Errado -->
+    <audio id="audio-errado">
+      <source src="audios/fail1.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Áudio Correto -->
+    <audio id="audio-correto">
+      <source src="audios/sucess2.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Seta Retroceder -->
+    <a href="index.html">
+      <img src="imagens/icones/retroceder.png" alt="seta-retroceder" id="seta-retroceder">
+    </a>
+  </header>
+
+  <main>
+    <!-- Cenário -->
+    <img src="imagens/rei/cenario/noite-rei.png" alt="noite-rei" id="noite-rei">
+    <img src="imagens/rei/cenario/rei.png" alt="rei" id="rei">
+    <img src="imagens/rei/cenario/planeta.png" alt="planeta" id="planeta">
+    <img src="imagens/rei/cenario/manto.png" alt="manto" id="manto">
+    <div class="estrelas"> </div>
+
+    <!-- Câmara -->
+    <div id="webcam-container"></div>
+
+    <!-- Balões de Fala -->
+    <img src="imagens/rei/baloes-fala/balao-fala1.png" alt="balao-fala1" id="balao-fala1" class="balao">
+    <img src="imagens/rei/baloes-fala/balao-fala2.png" alt="balao-fala2" id="balao-fala2" class="balao">
+    <img src="imagens/rei/baloes-fala/balao-fala3.png" alt="balao-fala3" id="balao-fala3" class="balao">
+    <img src="imagens/rei/baloes-fala/balao-fala4.png" alt="balao-fala4" id="balao-fala4" class="balao">
+    <img src="imagens/rei/baloes-fala/balao-fala5.png" alt="balao-fala5" id="balao-fala5" class="balao">
+    <img src="imagens/rei/baloes-fala/balao-fala6.png" alt="balao-fala6" id="balao-fala6" class="balao">
+    <img src="imagens/rei/baloes-fala/balao-fala7.png" alt="balao-fala7" id="balao-fala7" class="balao">
+    <img src="imagens/rei/baloes-fala/balao-fala8.png" alt="balao-fala8" id="balao-fala8" class="balao">
+    <img src="imagens/rei/baloes-fala/balao-fala9.png" alt="balao-fala9" id="balao-fala9" class="balao">
+
+    <!-- Botão de Ajuda -->
+    <div class="ajuda">
+      <img src="imagens/icones/help-icon g.png" onclick="myPopUp()">
+      <span class="popuptext" id="popup">Cumpre as ordens do Rei através de gestos.</span>
+    </div>
+    
+        <!-- Botão Finalizar -->
+    <button type="button" class="desistir" id="btnDesistir">Desistir</button>
+
+    <!-- Mensagem Principezinho -->
+    <container class="fullScreen" id="fullscreen-container"> <a class="close" onclick="fecharFullscreen()">X</a>
+    </container>
+  </main>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+  <script src="js/rei.js"></script>
+  <script src="js/estrelas.js"></script>
+  <script src="js/geral.js"></script>
+</body>
+
+</html>
